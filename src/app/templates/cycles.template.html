@@ -1,0 +1,18 @@
+<md-tab-group md-selected="selectedIndex" md-border-bottom md-autoselect md-swipe-content>
+	<md-tab *ngFor="let cycle of cycles" ng-disabled="tab.disabled" label="Du {{cycle.startDate | date:'dd/MM/yyyy'}} au {{cycle.endDate | date:'dd/MM/yyyy'}}">
+		<md-card *ngFor="let day of days | searchFilter:'cycleId':cycle.id">
+      <p class="dayDateContainer">
+				{{day.date | date:'EEE dd MMM yyyy'}}
+      </p>
+			<p>
+				{{day.description}}
+			</p>
+
+			<md-chip-list>
+				<md-chip *ngFor="let observation of observations | searchFilter:'id':day.observationId" [style.background]="observation.color">
+					{{observation.name}}
+				</md-chip>
+			</md-chip-list>
+		</md-card>
+	</md-tab>
+</md-tab-group>

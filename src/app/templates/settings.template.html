@@ -1,0 +1,7 @@
+
+  	<ion-card *ngFor="let observation of observations" [style.background]="observation.color">
+			<p>
+        <inline-editor type="text" [(ngModel)]="observation.name" (onSave)="saveEditable($event)" ngDefaultControl size="8">{{observation.name}}</inline-editor>
+			</p>
+
+		</ion-card>

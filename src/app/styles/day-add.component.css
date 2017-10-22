@@ -1,0 +1,7 @@
+md-form-field, md-select, button {
+  position: relative;
+ left:50%;
+ transform: translateX(-50%);
+ width:90%;
+ margin:5px auto;
+}

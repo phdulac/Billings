@@ -1,0 +1,20 @@
+<md-toolbar color="primary">
+    <span>Billings</span>
+    <span class="example-spacer"></span>
+    <a (click)="openDialog()"><md-icon>settings</md-icon></a>
+</md-toolbar>
+<md-tab-group [(selectedIndex)]="selectedTabIndex">
+  <md-tab>
+     <ng-template md-tab-label>
+      <md-icon>today</md-icon> Nouveau jour
+    </ng-template>
+    <day-add></day-add>
+  </md-tab>
+  <md-tab>
+    <ng-template md-tab-label>
+      <md-icon>restore</md-icon> Cycles
+    </ng-template>
+    <cycles *ngIf="selectedTabIndex == 1"></cycles>
+  </md-tab>
+</md-tab-group>
+

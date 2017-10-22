@@ -1,0 +1,9 @@
+md-card{
+  padding:5px;
+  min-height: 60px;
+}
+
+.dayDateContainer {
+    color:rgba(0,0,0,.87);
+    line-height:5px;
+}

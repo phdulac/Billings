@@ -1,0 +1,21 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~onsenui/css/onsenui.css';
+@import '~onsenui/css/onsen-css-components.css';
+
+
+my-app {
+  position: absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+}
+
+md-card {
+  margin:5px
+}
+
+md-chip {
+  padding:2px 2px!important;
+  border-radius:3px!important;
+}
